@@ -1,7 +1,11 @@
 export class Cart
 {
-    imagePath:String;
-    itemName:String;
-    quentity:Number;
-    price:Float32Array;
+    id:string;
+    imagePath:string;
+    itemName:string;
+    quantity:number;
+    unitPrice:number;
+    itemLink:string;
+    cummulativeprice:number;
+
 }

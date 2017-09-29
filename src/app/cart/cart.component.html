@@ -1,9 +1,39 @@
 <section id="cart" class="bg-light-gray">
   <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h2 class="section-heading">About US</h2>
-      </div>
-    </div>
+    <div class="row col-lg-12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Item</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Total</th>
+        </tr>
+      </thead>
+      <tbody class = "test">
+        <tr *ngFor="let item of items; let count = index">
+          <td>
+            <img class="itemImg" src="assets/images/product.png" alt="Product" />
+          </td>
+          <td><a [routerLink]="['/item', item.id]" href="#">{{item.itemName}}</a></td>
+          <td>{{item.unitPrice}}</td>
+          <td> <input type="text" class="quantityEdit" [(ngModel)]="item.quantity"><div><a (click)="update(count)">update</a> </div> </td>
+          <td>{{ item.cummulativeprice }} </td>
+          <td class=""> <div><a (click)="remove(item.id)">remove</a></div>
+             
+          </td>
+        </tr>
+      </tbody>
+      </table>
+      <hr>
+        <div class="col-lg-7"></div>
+        <div class="col-lg-2">Total</div>
+        <div class="col-lg-3">{{ getTotal() }} </div>
+      
+        <div class="col-lg-8"></div>
+        <div class="col-lg-2"><button class="btn-warning btn-sm" type="button">Continue Shopping</button></div>
+        <div class="col-lg-2"><button class="btn-primary btn-sm" type="button">Buy Now</button></div>
+  </div>
   </div>
 </section>

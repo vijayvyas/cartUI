@@ -14,4 +14,17 @@ export class CartService {
     });
   }
 
+
+  remove(url:string){
+    return this.httpClient.delete(url, {
+      headers: this.headers,
+    });
+  }
+
+  update(url:string, cart){
+    return this.httpClient.put(url, cart, {
+      headers: this.headers,
+    });
+  }
+
 }

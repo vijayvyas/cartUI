@@ -1,0 +1,19 @@
+.quantityEdit
+{
+    width: 40px;
+}
+
+.itemImg
+{
+    height: 100px;
+    width: 100px;
+}
+
+.itemHeader
+{
+    font-size: 20px;
+}
+
+.item, td {
+    font-size: 20px;
+}
